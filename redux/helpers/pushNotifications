@@ -1,0 +1,58 @@
+import PushNotificationIOS from "@react-native-community/push-notification-ios";
+var PushNotification = require("react-native-push-notification");
+import { ENDPOINT } from 'react-native-dotenv';
+import authHead from "./authHead";
+import axios from "axios";
+import {messageActions} from '../actions'
+
+const iosAPNConfig = (userId,userToken) => {
+    
+    
+    PushNotification.configure({
+      // (optional) Called when Token is generated (iOS and Android)
+      onRegister: function (token) {
+        
+        axios.post(ENDPOINT + '/device/add', {
+          userId,
+          iosDeviceToken: token.iosDeviceToken.token
+        },
+        {
+            headers: {
+            'x-access-token': userToken
+            }
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+      },
+    
+      // (required) Called when a remote is received or opened, or local notification is opened
+      onNotification: function (notification) {
+          messageActions.setBadge(1)    
+        // (required) Called when a remote is received or opened, or local notification is opened
+        notification.finish(PushNotificationIOS.FetchResult.NoData);
+      },
+    
+      // IOS ONLY (optional): default: all - Permissions to register.
+      permissions: {
+        alert: true,
+        badge: true,
+        sound: true,
+      },
+    
+      // Should the initial notification be popped automatically
+      // default: true
+      popInitialNotification: true,
+ 
+      /**
+       * (optional) default: true
+       * - Specified if permissions (ios) and token (android and ios) will requested or not,
+       * - if not, you must call PushNotificationsHandler.requestPermissions() later
+       * - if you are not using remote notification or do not have Firebase installed, use this:
+       *     requestPermissions: Platform.OS === 'ios'
+       */
+      requestPermissions: true,
+    });
+  }
+
+export default iosAPNConfig;

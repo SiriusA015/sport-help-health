@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "99375986031",
+    "project_id": "dotted-marking-271616",
+    "storage_bucket": "dotted-marking-271616.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99375986031:android:8279c05dab008470af649a",
+        "android_client_info": {
+          "package_name": "com.kevin.spot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99375986031-03j76d0nrcjjooh81mae09e2v8v6474u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyvb5-aFG5nASDCUBDWBZScVm2KCvze7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99375986031-03j76d0nrcjjooh81mae09e2v8v6474u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99375986031:android:3b3235d002ade420af649a",
+        "android_client_info": {
+          "package_name": "com.spot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99375986031-03j76d0nrcjjooh81mae09e2v8v6474u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyvb5-aFG5nASDCUBDWBZScVm2KCvze7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99375986031-03j76d0nrcjjooh81mae09e2v8v6474u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
